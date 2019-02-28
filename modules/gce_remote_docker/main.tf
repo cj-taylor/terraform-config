@@ -131,6 +131,7 @@ ${file("${path.module}/docker.env")}
 
 ### in-line
 export TRAVIS_DOCKER_HOSTNAME=${var.env}-${var.index}-dockerd-${var.name}.gce-${var.region}.${var.dns_domain}
+export DOCKER_OPTS="${DOCKER_OPTS} --registry-mirror=https://mirror.gcr.io"
 EOF
 
     github_users_env = <<EOF
